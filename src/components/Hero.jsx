@@ -6,7 +6,6 @@ const Hero = () => {
         <section className="hero-section">
             <div className="hero-overlay"></div>
             <div className="container hero-content animate-fade-in">
-                <span className="hero-label">Welcome Home</span>
                 <h1 className="hero-title">Experience God's Love Together</h1>
                 <p className="hero-subtitle">
                     We gather weekly to worship, learn from the Scriptures, serve one another, and make space for God's grace in Mississauga.

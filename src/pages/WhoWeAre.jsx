@@ -5,7 +5,6 @@ const WhoWeAre = () => {
         <main className="page-wrapper animate-fade-in" style={{ paddingTop: '100px', minHeight: '60vh' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <span className="hero-label">Catch The Fire</span>
                     <h1 className="section-title">Who We Are</h1>
                 </div>
 
