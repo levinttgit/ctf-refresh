@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink as NavHashLink } from 'react-router-hash-link';
 import { Facebook, Instagram, Youtube, MapPin, Mail } from 'lucide-react';
 
 const Footer = () => {
@@ -22,10 +24,10 @@ const Footer = () => {
                     <div className="footer-links-col">
                         <h3 className="footer-heading">Quick Links</h3>
                         <ul className="footer-links">
-                            <li><a href="#connect">Connect Groups</a></li>
-                            <li><a href="#give">Donate Now</a></li>
+                            <li><Link to="/who-we-are">Who We Are</Link></li>
+                            <li><NavHashLink smooth to="/#connect">Connect Groups</NavHashLink></li>
+                            <li><Link to="/give">Give Online</Link></li>
                             <li><a href="#live">Watch Live</a></li>
-                            <li><a href="#visit">Plan a Visit</a></li>
                         </ul>
                     </div>
 

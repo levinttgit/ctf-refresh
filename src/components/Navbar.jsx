@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { HashLink as NavHashLink } from 'react-router-hash-link';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -29,9 +30,9 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <div className="navbar-links desktop-only">
                     <Link to="/who-we-are" className="nav-link">Who We Are</Link>
-                    <a href="/#connect" className="nav-link">Connect</a>
+                    <NavHashLink smooth to="/#connect" className="nav-link">Connect</NavHashLink>
                     <Link to="/give" className="nav-link">Give</Link>
-                    <button className="btn btn-primary">Plan A Visit</button>
+                    <NavHashLink smooth to="/#visit" className="btn btn-primary">Plan A Visit</NavHashLink>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -46,9 +47,9 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
                 <Link to="/who-we-are" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Who We Are</Link>
-                <a href="/#connect" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Connect</a>
+                <NavHashLink smooth to="/#connect" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Connect</NavHashLink>
                 <Link to="/give" className="mobile-link" onClick={() => setIsMobileMenuOpen(false)}>Give</Link>
-                <button className="btn btn-primary mobile-btn">Plan A Visit</button>
+                <NavHashLink smooth to="/#visit" className="btn btn-primary mobile-btn" onClick={() => setIsMobileMenuOpen(false)}>Plan A Visit</NavHashLink>
             </div>
         </nav>
     );
